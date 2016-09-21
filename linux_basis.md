@@ -28,5 +28,10 @@
 - `echo $-`: to list all the set options of current shell
 
 ### shell embedding
-- $()
-- `\`\``
+- dollar-bracket: $(), recommended
+- backsticks: ``, but cant nest embedded shell. and it is easily confusing with ''
+### shell history
+- `!!`: repeat last command
+- `!<chars>`: repeat command starting with <chars>
+- `!<n>`: repeat the command with identifier number *n*
+- 
