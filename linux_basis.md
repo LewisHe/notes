@@ -30,8 +30,22 @@
 ### shell embedding
 - dollar-bracket: $(), recommended
 - backsticks: ``, but cant nest embedded shell. and it is easily confusing with ''
+
 ### shell history
 - `!!`: repeat last command
 - `!<chars>`: repeat command starting with <chars>
 - `!<n>`: repeat the command with identifier number *n*
-- 
+- `!<regexp>`, where <regexp> in the format: **<chars>:s/1/2**
+- Ctrl-r : to search history
+- `$HISTSIZE`, `$HISTFILE`, `$HISTFILESIZE`
+
+### File Globbing
+- `*`: any combination of chars, even none
+- `?`: a single char
+- `[]`: any of the chars specified inside the bracket
+- `a-z`, `0-9`: chars within the range, use with `[]`
+- `[!]`: any chars NOT specified inside the bracket
+- `$LANG` some languages include lower case letters in an upper case range
+- escaping globbing by using single quotes, or escape chars
+
+### redirecting and pipes
