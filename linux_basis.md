@@ -26,4 +26,7 @@
 - `unset`: to remove a variable from shell environment
 - `env`: to display a list of **exported variables**, which will be inherited by child shells.
 - `echo $-`: to list all the set options of current shell
-- 
+
+### shell embedding
+- $()
+- `\`\``
