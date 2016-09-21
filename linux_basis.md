@@ -49,3 +49,16 @@
 - escaping globbing by using single quotes, or escape chars
 
 ### redirecting and pipes
+- stream 0: stdin
+- stream 1: stdout
+- stream 2: stderr
+- **stdout** can be redirected with a `>` sign
+    - it is in fact the abbreviation of `1>(stdout)`
+    - the output file is erased
+    - erasing a file while using `>` can be prevented by setting `noclobber` option
+    - `noclobber` option can be overruled by `>|`
+- `>>` to append
+- error redirection: `2>stderr`, `2>&1`
+- input redirection `<`
+- `<<` here document: is a way to append input until a certain sequence (eg *EOF*, or Ctrl-D) is encountered.
+- `<<<` here string: is used to directly pass strings to a command, same as `echo string | command`, but with one less process running
