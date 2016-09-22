@@ -62,3 +62,32 @@
 - input redirection `<`
 - `<<` here document: is a way to append input until a certain sequence (eg *EOF*, or Ctrl-D) is encountered.
 - `<<<` here string: is used to directly pass strings to a command, same as `echo string | command`, but with one less process running
+- pipes: `|`: pipe from stdout of one process to stdin of another process
+
+### filters
+- `cat`
+- `tee`
+- `grep`
+- `cut`
+- `tr`
+- `wc`
+- `uniq`
+- `sort`
+- `comm`
+- `od`
+- `sed`
+
+### Basic unit tools
+- `find`
+    - `find . -name "*.conf"`
+    - `find . -type f -name "*.conf"`
+    - `find . -newer test.txt`
+    - `find . -name "*.conf" -exec cp {} /backup/ \;`
+    - not operator: `!`: `find . ! -name "*.conf"`
+    - or operator: `-o`: `find . -name "*.conf" -o -name "*.txt"`
+
+
+
+
+
+
