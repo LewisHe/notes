@@ -82,9 +82,31 @@
     - `find . -name "*.conf"`
     - `find . -type f -name "*.conf"`
     - `find . -newer test.txt`
-    - `find . -name "*.conf" -exec cp {} /backup/ \;`
+    - `touch -t 20160130 marker_start`
+    - `find . -type f -newerat "20160130 23:59:59"`
+    - `find . -name "*.conf" -exec grep test {} /backup/ \;` 
+        - find will execute grep and will substitute {} with the filename(s) found. The difference between ; and + is that with ; a single grep command for each file is executed whereas with + as many files as possible are given as parameters to grep at once.
     - not operator: `!`: `find . ! -name "*.conf"`
     - or operator: `-o`: `find . -name "*.conf" -o -name "*.txt"`
+    - by permission: `-perm`
+    - limit depth: `-maxdepth`
+    - readonly file: `find . -perm /u=r`
+    - by owner `-user`
+    - by group `-group`
+- `locate` : uese an index to locate files
+- `date`
+- `cal`
+- `sleep`
+- `time`: display how long it taks to execute a command
+- `gzip`, `gunzip`
+- `zcat`, `zmore`: to view zipped text files
+
+### scripting
+- `source`, `.`
+- which shell runs the scripts?
+    - run with `bash script`
+    - specified at the first line `#!/bin/bash`
+- `bash -x script` to debug
 
 
 
